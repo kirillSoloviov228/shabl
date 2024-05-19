@@ -1,0 +1,135 @@
+﻿<Page x:Class="shabl.AddZhouryModer"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:shabl"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddZhouryModer">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="197*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="397*"/>
+                <ColumnDefinition Width="403*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20*"/>
+                    <RowDefinition Height="219*"/>
+                    <RowDefinition Height="16*"/>
+                    <RowDefinition Height="29*"/>
+                    <RowDefinition Height="13*"/>
+                    <RowDefinition Height="34*"/>
+                    <RowDefinition Height="34*"/>
+                    <RowDefinition Height="29*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="188*"/>
+                    <ColumnDefinition Width="204*"/>
+                    <ColumnDefinition Width="11*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Grid.Column="1" Grid.Row="1" x:Name="photoUser"/>
+                <Button Grid.Column="1" Grid.Row="1" Background="Transparent" Click="clickPhotoUser"/>
+
+                <TextBlock Grid.Row="3" Grid.Column="0" Text="Пароль:" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0" FontFamily="Arial" FontSize="14"/>
+                <TextBox Grid.Row="3" Grid.Column="1" Visibility="Hidden" Name="textPassV"/>
+                <PasswordBox Grid.Row="3" Grid.Column="1" Name="textPass"/>
+
+                <TextBlock Grid.Row="5" Grid.Column="0" Text="Пароль:" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0" FontFamily="Arial" FontSize="14"/>
+                <TextBox Grid.Row="5" Grid.Column="1" Visibility="Hidden" Name="textPassV2"/>
+                <PasswordBox Grid.Row="5" Grid.Column="1" Name="textPass2"/>
+
+                <CheckBox Grid.Row="6"  Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Right" Content="Видимый пароль" FontSize="18" Unchecked="checkBox_Unchecked"
+    Indeterminate="checkBox_Indeterminate"
+    Checked="checkBox_Checked" Name="passCheckBox"/>
+
+                <Grid Grid.Row="7" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="83*"/>
+                        <ColumnDefinition Width="40*"/>
+                        <ColumnDefinition Width="81*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Content="OK" Click="Button_Click"/>
+                    <Button Grid.Column="2"/>
+
+                </Grid>
+
+            </Grid>
+
+
+
+
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="22"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="7"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="7"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="7"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="7"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="7"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="7"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="7"/>
+                    <RowDefinition Height="37*"/>
+                    <RowDefinition Height="37*"/>
+                    <RowDefinition Height="39*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="155*"/>
+                    <ColumnDefinition Width="242*"/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.Row="1" Grid.Column="1" Background="#FF9E9D9D"/>
+
+                <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0" Text="Id Number" FontFamily="Arial" FontSize="14"/>
+                <TextBlock Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="textId" Text="" FontFamily="Arial" FontSize="14"/>
+
+                <TextBlock Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0" Text="ФИО:" FontFamily="Arial" FontSize="14"/>
+                <TextBox Grid.Row="3" Grid.Column="1" Name="textFIO"/>
+
+                <TextBlock Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0" Text="Пол:" FontFamily="Arial" FontSize="14"/>
+                <ComboBox Grid.Row="5" Grid.Column="1" x:Name="polComboBox">
+                    <TextBlock><Run Text="Мужской"/></TextBlock>
+                    <TextBlock><Run Text="Женский"/></TextBlock>
+                </ComboBox>
+
+                <TextBlock Grid.Row="7" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0" Text="Роль:" FontFamily="Arial" FontSize="14"/>
+                <ComboBox Grid.Row="7" Grid.Column="1" x:Name="roleComboBox" >
+                    <TextBlock><Run Text="Жюри"/></TextBlock>
+                    <TextBlock><Run Text="Модератор"/></TextBlock>
+                </ComboBox>
+
+                <TextBlock Grid.Row="9" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0" Text="Email:" FontFamily="Arial" FontSize="14"/>
+                <TextBox Grid.Row="9" Grid.Column="1" Name="textEmail"/>
+
+                <TextBlock Grid.Row="11" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0" Text="Телефон:" FontFamily="Arial" FontSize="14"/>
+                <TextBox Grid.Row="11" Grid.Column="1"/>
+
+                <TextBlock Grid.Row="13" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0" Text="Направление:" FontFamily="Arial" FontSize="14"/>
+                <TextBox Grid.Row="13" Grid.Column="1" Name="textD"/>
+
+                <CheckBox Grid.Row="15"  Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Right" Content="Прикрепить к мероприятию" Name="checkEvent"/>
+
+                <TextBlock Grid.Row="16" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0" Text="Мероприятие:" FontFamily="Arial" FontSize="14"/>
+                <ComboBox Grid.Row="16" Grid.Column="1" x:Name="mComboBox"/>
+
+                <xctk:MaskedTextBox Grid.Row="11" Grid.Column="1" Mask="+7(000)000-00-00" Name="MaskaPhone"/>
+
+            </Grid>
+
+        </Grid>
+    </Grid>
+</Page>

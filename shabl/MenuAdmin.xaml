@@ -1,0 +1,80 @@
+﻿<Page x:Class="shabl.MenuAdmin"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:shabl"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MenuAdmin">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="107*"/>
+            <ColumnDefinition Width="293*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="187*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="" Grid.ColumnSpan="2" Grid.Row="0" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center" Name="titlea"></TextBlock>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="18*"/>
+                <ColumnDefinition Width="181*"/>
+                <ColumnDefinition Width="15*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="209*"/>
+                <RowDefinition Height="18*"/>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="94*"/>
+                <RowDefinition Height="13*"/>
+            </Grid.RowDefinitions>
+            <Image Grid.Row="1" Grid.Column="1" Name="Imagege"></Image>
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="116*"/>
+                <ColumnDefinition Width="323*"/>
+                <ColumnDefinition Width="147*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="26*"/>
+                <RowDefinition Height="29*"/>
+                <RowDefinition Height="93*"/>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="98*"/>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="116*"/>
+            </Grid.RowDefinitions>
+
+            <Button Grid.Column="1" Grid.Row="2" Content="Мероприятия" FontSize="18" Visibility="Hidden" Name="EventsButton">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="20"></Setter>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button Grid.Column="1" Grid.Row="4" Content="Участники" FontSize="18" Visibility="Hidden" Name="ParticipantButton">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="20"></Setter>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button Grid.Column="1" Grid.Row="6" Content="Жюри" FontSize="18" Click="Button_Click" Visibility="Hidden" Name="JuryButton">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="20"></Setter>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <TextBlock Grid.Row="1" Grid.Column="1" Name="Timee" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+            <TextBlock Name="Hello" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        </Grid>
+
+    </Grid>
+</Page>

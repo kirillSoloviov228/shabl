@@ -1,0 +1,41 @@
+﻿<Page x:Class="shabl.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:shabl"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="LoginPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="195*"/>
+            <ColumnDefinition Width="283*"/>
+            <ColumnDefinition Width="94*"/>
+            <ColumnDefinition Width="228*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="123*"/>
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="95*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Right" FontFamily="Arial" FontSize="16" Text="Логин(id): "></TextBlock>
+        <TextBlock Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Right" FontFamily="Arial" FontSize="16" Text="Пароль: " ></TextBlock>
+        <TextBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Name="login"></TextBox>
+        <TextBox Grid.Row="3" Grid.Column="1" Visibility="Hidden" Name="password"></TextBox>
+        <PasswordBox  Grid.Row="3" Grid.Column="1" Name="passw"></PasswordBox>
+        <Button Grid.Row="3" Grid.Column="2" Margin="1,1,1,1" Click="Button_Click_1">👁️</Button>
+        <Button Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Click="Button_Click">Вход</Button>
+        <Button Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2">Регистрация</Button>
+        <TextBlock Grid.Row="1" Grid.Column="3" Text="Пример логина: 21" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Grid.Row="3" Grid.Column="3" Text="Пример пароля: Ke22Yh8Pp7" VerticalAlignment="Center"></TextBlock>
+
+    </Grid>
+</Page>
